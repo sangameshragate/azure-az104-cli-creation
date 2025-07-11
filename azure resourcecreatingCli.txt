@@ -1,0 +1,78 @@
+This document help  to create  azure resources using CLI
+
+>>First you need  to install azure cli.
+
+later you need to connect azure account using below command.
+
+>az login
+
+it will shows  the your active subscription.
+select the option using number or subscription.
+
+
+>>First you need to resource group to create resource:
+
+_______________________________________________________________________________
+
+
+#for deploying  resource group:
+
+> az group create --name (Resourcegroupname) --location Centralindia
+
+_______________________________________________________________________________
+
+
+#Creating VM in resource group using below command
+
+> az vm create `
+  --resource-group demo3 `
+  --name demo-vm3 `
+  --image Ubuntu2204 `
+  --size Standard_B2s `
+  --admin-username azureuser `
+  --vnet-name test-vnet `
+  --subnet test-subnet `
+  --generate-ssh-keys `
+  --output json `
+  --verbose
+
+_______________________________________________________________________________
+
+
+#checking how many vms deployed in your subscription 
+
+> az vm list --output table
+
+_______________________________________________________________________________
+
+
+#for checking on resource group how many vms deployed
+
+> az vm list --resource-group (Resorcegroupname) --output table
+
+_______________________________________________________________________________
+
+
+#Creating storage account
+
+> az storage account create `
+ --name demostorage4 `
+ --resource-group demo3 `
+ --location centralindia `
+ --sku Standard_LRS `
+ --kind StorageV
+
+_______________________________________________________________________________
+
+#checking howmanystorage account created
+
+  > az storage account list --output table
+_______________________________________________________________________________
+
+#Creating container in the storage account
+
+>
+
+
+
+
