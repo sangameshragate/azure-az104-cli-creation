@@ -71,8 +71,18 @@ _______________________________________________________________________________
 
 #Creating container in the storage account
 
->
+>az storage blob upload `
+  --account-name demostorage4 `
+  --container-name dmoecontainer4  `
+  --file "C:\Users\Admin\Documents\azure resourcecreatingCli.txt" `
+  --name example.txt `
+  --auth-mode login
 
+
+
+File : which file you want add in the container, that file path of your system
+
+_______________________________________________________________________________
 
 
 
