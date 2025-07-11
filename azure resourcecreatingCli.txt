@@ -84,5 +84,9 @@ File : which file you want add in the container, that file path of your system
 
 _______________________________________________________________________________
 
+#deleteing resourcegroup
+
+>az group delete --name (resource group name)
+
 
 
